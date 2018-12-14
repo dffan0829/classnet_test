@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/index.do" location="50,50" dimension="268,84" />
+  <StrutsActivity path="/news/newsMenu.do" location="650,150" dimension="358,84" />
+  <StrutsActivity path="/news/pubnews.do" location="50,350" dimension="358,84" />
+  <StrutsActivity path="/news/news.do" location="950,350" dimension="358,84" />
+  <StrutsActivity path="/clazz/clazzMenu.do" location="350,550" dimension="358,84" />
+  <StrutsActivity path="/clazz/fileType.do" location="950,650" dimension="358,84" />
+  <StrutsActivity path="/clazz/add.do" location="950,850" dimension="358,84" />
+  <StrutsActivity path="/clazz/change.do" location="350,950" dimension="358,84" />
+  <StrutsActivity path="/clazz/clazz.do" location="950,1050" dimension="358,84" />
+  <StrutsActivity path="/source/menu.do" location="350,1150" dimension="358,84" />
+  <StrutsActivity path="/source/source.do" location="50,1350" dimension="358,84" />
+  <StrutsActivity path="/user.do" location="1250,1250" dimension="358,84" />
+  <StrutsActivity path="/homework.do" location="1250,1450" dimension="358,84" />
+  <StrutsActivity path="/topic/topicMenu.do" location="1250,1650" dimension="358,84" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/index.jsp" location="950,50" dimension="226,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/newsMenuList.jsp" location="50,250" dimension="268,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/addnews.jsp" location="650,350" dimension="238,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/newslist.jsp" location="50,550" dimension="244,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/clazzmenuList.jsp" location="950,550" dimension="274,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/filetypeList.jsp" location="350,850" dimension="268,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/addclazz.jsp" location="50,950" dimension="244,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/clazzList.jsp" location="50,1150" dimension="250,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/sourceMenuList.jsp" location="650,1350" dimension="280,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/sourceList.jsp" location="650,1450" dimension="256,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/addsource.jsp" location="50,1550" dimension="250,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/userlist.jsp" location="350,1550" dimension="244,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/homeworktitle.jsp" location="650,1550" dimension="274,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/addhomeworktitle.jsp" location="50,750" dimension="292,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/homeworklist.jsp" location="650,1650" dimension="268,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/homeworktitledetail.jsp" location="50,1650" dimension="310,48" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/topicmenulist.jsp" location="350,2050" dimension="274,48" />
+  <StrutsActivity path="" location="650,50" dimension="40,48" />
+  <StrutsActivity path="/topic/topic.do" />
+  <StrutsActivity path="/../WEB-INF/jsp/admin/topiclist.jsp" />
+  <StrutsTransition id="/user.do,list,/../WEB-INF/jsp/admin/userlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,index,/../WEB-INF/jsp/admin/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="318,113" />
+      <AbsolutePoint location="1063,113" />
+      <AbsolutePoint location="1063,98" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clazz/clazz.do,list,/../WEB-INF/jsp/admin/clazzList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1092" />
+      <AbsolutePoint location="175,1092" />
+      <AbsolutePoint location="175,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/source/menu.do,list,/../WEB-INF/jsp/admin/sourceMenuList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news/newsMenu.do,list,/../WEB-INF/jsp/admin/newsMenuList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="184,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news/news.do,list,/../WEB-INF/jsp/admin/newslist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/topic/topic.do,list,/../WEB-INF/jsp/admin/topiclist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news/news.do,edit,/../WEB-INF/jsp/admin/addnews.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,383" />
+      <AbsolutePoint location="888,383" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clazz/clazz.do,edit,/../WEB-INF/jsp/admin/addclazz.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1129,1092" />
+      <AbsolutePoint location="172,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/homework.do,addTitle,/../WEB-INF/jsp/admin/addhomeworktitle.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1608,1492" />
+      <AbsolutePoint location="1683,1492" />
+      <AbsolutePoint location="1683,774" />
+      <AbsolutePoint location="342,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news/pubnews.do,to,/../WEB-INF/jsp/admin/addnews.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="769,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/homework.do,homeworklist,/../WEB-INF/jsp/admin/homeworklist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1429,1492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/topic/topicMenu.do,list,/../WEB-INF/jsp/admin/topicmenulist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clazz/add.do,succ,/../WEB-INF/jsp/admin/addclazz.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1129,934" />
+      <AbsolutePoint location="1129,974" />
+      <AbsolutePoint location="294,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/homework.do,homeworktitledetail,/../WEB-INF/jsp/admin/homeworktitledetail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1429,1534" />
+      <AbsolutePoint location="1429,1674" />
+      <AbsolutePoint location="360,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clazz/clazzMenu.do,list,/../WEB-INF/jsp/admin/clazzmenuList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="708,583" />
+      <AbsolutePoint location="950,583" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/homework.do,titleList,/../WEB-INF/jsp/admin/homeworktitle.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1399,1534" />
+      <AbsolutePoint location="1399,1574" />
+      <AbsolutePoint location="924,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clazz/fileType.do,list,/../WEB-INF/jsp/admin/filetypeList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/source/source.do,add,/../WEB-INF/jsp/admin/addsource.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1434" />
+      <AbsolutePoint location="229,1550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/source/source.do,list,/../WEB-INF/jsp/admin/sourceList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="259,1434" />
+      <AbsolutePoint location="259,1474" />
+      <AbsolutePoint location="650,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

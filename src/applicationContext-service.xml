@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean id="baseDao" abstract="true">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="newsDao" class="com.classnet.dao.impl.NewsDaoImpl" parent="baseDao"></bean>
+	<bean id="newsMenuDao" class="com.classnet.dao.impl.NewsMenuDaoImpl" parent="baseDao"></bean>
+	<bean id="clazzDao" class="com.classnet.dao.impl.ClazzDaoImpl" parent="baseDao"></bean>
+	<bean id="clazzMenuDao" class="com.classnet.dao.impl.ClazzMenuDaoImpl" parent="baseDao"></bean>
+	<bean id="fileTypeDao" class="com.classnet.dao.impl.FileTypeDaoImpl" parent="baseDao"></bean>
+	<bean id="sourceDao" class="com.classnet.dao.impl.SourceDaoImpl" parent="baseDao"></bean>
+	<bean id="sourceMenuDao" class="com.classnet.dao.impl.SourceMenuDaoImpl" parent="baseDao"></bean>
+	<bean id="userDao" class="com.classnet.dao.impl.UserDaoImpl" parent="baseDao"></bean>
+	<bean id="homeWorkTitleDao" class="com.classnet.dao.impl.HomeWorkTitleDaoImpl" parent="baseDao"></bean>
+	<bean id="userHomeWorkDao" class="com.classnet.dao.impl.UserHomeWorkDaoImpl" parent="baseDao"></bean>
+	<bean id="topicDao" class="com.classnet.dao.impl.TopicDaoImpl" parent="baseDao"></bean>
+	<bean id="topicMenuDao" class="com.classnet.dao.impl.TopicMenuDaoImpl" parent="baseDao"></bean>
+	<bean id="answerDao" class="com.classnet.dao.impl.AnswerDaoImpl" parent="baseDao"></bean>
+	<bean id="studentDao" class="com.classnet.test.StudentDaoImpl" parent="baseDao"></bean>
+</beans>

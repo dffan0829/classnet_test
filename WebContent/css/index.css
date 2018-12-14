@@ -1,0 +1,510 @@
+@charset "utf-8";
+/*--通用定义--*/
+* {
+	margin:0;
+	padding:0;
+}
+img {
+	display:inline-block;
+	border:none
+}
+body {
+	font: normal normal normal 12px/150% Arial, "宋体", Helvetica, sans-serif;
+	color:#666;
+	background:#becbcd url(../images/bodyBg.gif) repeat-x;
+}
+ul {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+	color:#666;
+}
+.clearbox {
+	border-top: 1px solid transparent !important;
+	margin-top: -1px !important;
+	border-top: 0px;
+	margin-top: 0px;
+	height: 0px;
+	clear: both;
+	background: none;
+	font-size: 0px;
+	visibility: hidden;
+}/*clearbox：清除浮动，撑开边框*/
+.c_spacing {
+	background: none;
+	height: 5px;
+	font-size: 0px;
+}
+/*列表样式*/
+
+/*文字列表样式1*/
+.listStyle1 li {
+	line-height:24px;
+	text-align:right;
+}
+.listStyle1 li a {
+	float:left;
+	padding-left:12px;
+	background:url(../images/listIcon1.gif) 3px center no-repeat;
+}
+.subItemList li {
+	height:24px;
+	line-height:24px;
+	overflow:hidden;
+}
+.subItemList li a {
+	padding-left:12px;
+	background:url(../images/listIcon1.gif) 3px 7px no-repeat;
+}
+/*图片列表样式1*/
+.thumbListStlye1 .pe_u_thumb {
+	width:114px;
+	height:87px;
+	background:#fff;
+	border:1px solid #000;
+	float:left;
+}
+.thumbListStlye1 .pe_u_thumb img {
+	width:108px;
+	height:81px;
+	margin:3px;
+}
+.thumbListStlye1 .pe_u_thumb_title {
+	float:left;
+	width:60%;
+	padding:0 5px;
+}
+.thumbListStlye1 .pe_u_thumb_title a {
+	font-size:14px;
+	font-weight:bold;
+	height:21px;
+	line-height:21px;
+}
+.thumbListStlye1 li {
+	margin-bottom:24px;
+	overflow:hidden;
+	zoom:1;
+}
+/*图片列表样式2*/
+.thumbListStlye2 li {
+	float:left;
+	width:48%;
+	overflow:hidden;
+	zoom:1;
+	margin-bottom:12px;
+	height:150px;
+}
+.thumbListStlye2 .pe_u_thumb {
+	width:142px;
+	height:106px;
+	background:#fff;
+	border:1px solid #000;
+	margin:0 auto;
+}
+.thumbListStlye2 .pe_u_thumb img {
+	width:136px;
+	height:100px;
+	margin:3px;
+}
+.thumbListStlye2 .pe_u_thumb_title {
+	margin-top:2px;
+}
+.thumbListStlye3 .pe_u_thumb_title {
+	display:none;
+	line-height:18px;
+}
+.thumbListStlye3 .pe_u_thumb img {
+	width:100%;
+	height:150px;
+	margin-bottom:5px;
+}
+.thumbListStlye3 .pe_u_thumb_title {
+	display:none;
+}
+/*布局定义*/
+.wrap {
+	width:970px;
+	margin:0 auto;
+	background:#fff;
+	padding-top:4px;
+}
+#header, .main {
+	width:960px;
+	margin:0 auto;
+}
+.main {
+	height:100%;
+	overflow:hidden;
+	margin-top:3px;
+}
+#header {
+	background:url(../images/headerBg.jpg) top left no-repeat;
+	padding-top:143px;
+}
+.mainContent {
+	width:750px;
+	float:right;
+}
+/*--顶部样式定义--*/
+#globalNav {
+	height:40px;
+	height:100%;
+	overflow:hidden;
+}
+#globalNav li {
+	float:left;
+}
+#globalNav a span {
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	font-weight:bold;
+	padding:0 13px;
+	color:#236F8F;
+	display:inline-block;
+}
+#globalNav a:hover, #topTabOn a {
+	background:url(../images/navHoverBgRight.gif) right top no-repeat;
+	color:#fff;
+	display:inline-block;
+}
+#globalNav a:hover span, #topTabOn a span {
+	background:url(../images/navHoverBgLeft.gif) left top no-repeat;
+	cursor:pointer;
+	display:inline-block;
+	color:#fff;
+	display:inline-block;
+}
+#subnav {
+	height:24px;
+	overflow:hidden;
+	padding-left:100px;
+}
+#subnav li {
+	float:left;
+	padding:0px 7px;
+	height:24px;
+	line-height:24px;
+}
+#subnav li a:hover {
+	color:#8AB738;
+}
+/*--中部内容样式定义--*/
+	/*--右侧内容样式定义--*/
+	/*公告样式*/
+.r_navigation {
+	height:30px;
+	line-height:30px;
+	border:1px solid #d2e5ee;
+	padding-left:36px;
+	font-size:12px;
+	color:#0A7BBF;
+	background: url(../images/icon_navigation.gif) -1px -1px no-repeat;
+	overflow:hidden;
+}
+.r_navigation a{color:#0A7BBF;}
+
+#marqueebox{margin-left:42px;}
+#marqueebox a{display:block;height:30px;line-height:30px; }
+/*column1定义*/
+
+#column1 .newsList {
+	float: left;
+	width:400px;
+}
+#flashNews, #txtFrom, #imgTitle {
+	width:342px;
+}
+#flashNews {
+	float:right;
+	height:240px;
+}
+#imgTitle_down a:hover {
+	background:#c00;
+}
+/*盒子标题栏定义*/
+.mediumTurquoise dt, .lightGreen dt, .goldenrod dt, .steelBlue dt {
+	height:30px;
+	line-height:30px;
+	border-bottom:1px solid #fff;
+	padding-left:24px;
+	position:relative;
+}
+
+.colChildNav{
+	right:5px;
+	top:0px;
+	position:absolute;
+}
+
+.colChildNav li{ display:inline;padding:0 3px;}
+
+.mediumTurquoise dt em, .lightGreen dt em, .goldenrod dt em, .steelBlue dt em {
+	font-size:14px;
+	font-weight:bold;
+	font-style:normal;
+}
+.mediumTurquoise dd, .lightGreen dd, .goldenrod dd, .steelBlue dd {
+	padding:8px;
+}
+.steelBlue dt {
+	padding-left:44px;
+}
+/*钢蓝色盒子定义*/
+.steelBlue dt {
+	background:url(../images/steelBlue.jpg) no-repeat 0px 0px;
+}
+.steelBlue dt em{padding-top:5px;display:inline-block;  }
+.steelBlue dd {
+	background:url(../images/schoolIntroBg.jpg) no-repeat bottom right;
+	height: auto !important;
+	height:160px;
+	min-height:160px;
+	border:1px solid #eee;
+	border-top:none;
+}
+/*宝绿色盒子样式定义*/
+.mediumTurquoise dt {
+	background:url(../images/mediumTurquoiseTitle.jpg) no-repeat 0px 0px;
+}
+.mediumTurquoise dd {
+	background:#F8FCFB url(../images/mediumTurquoiseBg.jpg) repeat-x left top;
+	height: auto !important;
+	height: 196px;
+	min-height: 196px;
+}
+/*淡绿色盒子样式定义*/
+.lightGreen dt {
+	background:url(../images/lightGreenTitle.jpg) no-repeat 0px 0px;
+}
+.lightGreen dd {
+	background:#FDFDFB url(../images/lightGreenBg.jpg) repeat-x left top;
+	height: auto !important;
+	height: 175px;
+	min-height: 175px;
+}
+/*秋麒麟色盒子样式定义*/
+.goldenrod dt {
+	background:url(../images/goldenrodTitle.jpg) no-repeat 0px 0px;
+}
+.goldenrod dd {
+	background:#fff url(../images/goldenrodBg.jpg) repeat-x left top;
+	height: auto !important;
+	height: 150px;
+	min-height: 150px;
+}
+/*学校简介定义*/
+#schoolIntro img {
+	width:200px;
+	height:150px;
+	float:left;
+	background:#fff;
+	padding:2px;
+	border:1px solid #ccc;
+}
+.schoolIntroText {
+	float:right;
+	width:500px;
+}
+/*教学科研样式定义*/
+#instructionalResearch .col1 {
+	width:48%;
+}
+#instructionalResearch .col2 {
+	width:48%;
+	float:right;
+}
+/*德育天地样式定义 桃李芬芳样式定义*/
+.goldenrod .thumbListStlye2, .goldenrod .listStyle1, #moralEduSpace .thumbListStlye1, #moralEduSpace .listStyle1 {
+	width:48%;
+}
+.goldenrod .thumbListStlye2, #moralEduSpace .thumbListStlye1 {
+	float:left;
+	overflow:hidden;
+	zoom:1;
+}
+.goldenrod .listStyle1, #moralEduSpace .listStyle1 {
+	float:right;
+}
+/*--左侧内容样式定义--*/
+/* user_box(用户登录)、left_box(左侧内容) */
+#sideBar {
+	width:202px;
+	float:left;
+}
+.user_box, .left_box {
+	border: 1px solid #a6c7cc;
+}
+.user_box a:link, .user_box a:visited, .left_box a:link, .left_box a:visited {
+	color:#4D9ECF;
+}
+.left_box {
+	margin-bottom: 5px;
+}
+.user_box dt, .left_box dt {
+	padding-left:23px;
+	font: normal normal bold 13px Arial, "宋体", Helvetica, sans-serif;
+	color: #4D9ECF;
+	height:30px;
+	background:url(../images/leftBoxTitleBg.jpg) no-repeat 0px 0px;
+}
+.user_box dt {
+	background:url(../images/userBoxTitleBg.jpg) no-repeat 0px 0px;
+}
+.user_box dt em, .left_box dt em {
+	font-style:normal;
+	background:url(../images/leftBoxTitleBgRight.jpg) right bottom no-repeat;
+	display:inline-block;
+	height:30px;
+	padding:0 6px;
+	line-height:38px;
+	_line-height:28px;
+	_height:28px;
+	_padding-top:2px;
+	color:#236F8F;
+}
+.user_box dt li {
+	display:inline-block;
+	background:url(../images/userBoxTabsRight.gif) right bottom no-repeat;
+	height:30px;
+	line-height:38px;
+	_line-height:30px;
+	width:70px;
+	font:normal normal bold 12px/1.5em "Arial";
+	float:left;
+}
+.user_box dt li em {
+	background:url(../images/userBoxTabsLeft.gif) no-repeat left bottom;
+	cursor:pointer;
+	line-height:38px;
+	_line-height:22px;
+	_height:22px;
+	_padding-top:8px;
+	text-align: center;
+}
+.user_box dt .userTabsOn {
+	display:inline-block;
+	background:url(../images/leftBoxTitleBgRight.jpg) right bottom no-repeat;
+}
+.user_box dt .userTabsOn em {
+	background:url(../images/userBoxTabsOnLeft.gif) no-repeat left bottom;
+	cursor:pointer;
+	line-height:38px;
+	_line-height:22px;
+	_height:22px;
+	_padding-top:8px;
+}
+.user_box dd, .left_box dd {
+	padding:8px;
+	line-height: 150%;
+	height: auto !important;
+	height: 30px;
+	min-height: 30px;
+	color:#4D9ECF;
+	background:#EDF6FB url(../images/leftboxContentBg.jpg) repeat-x 0px 0px;
+}
+.user_box dd, .user_box dd a {
+	color:#4D9ECF;
+}
+.user_box dd{
+	text-align: center;
+	height: auto !important;
+	height:130px;
+	min-height:130px;
+}
+.user_box li {
+	height:24px;
+	line-height:24px;
+}
+.Login_ajax {
+	text-align:left;
+}
+#loginButton {
+	text-align:right;
+}
+#loginButton a:link, #loginButton a:visited {
+	text-decoration:underline;
+}
+#loginButton a:hover {
+	color:#f60;
+	text-decoration:underline;
+}
+#BtnLogOn,#StuLogOn {
+	width:76px;
+	height:20px;
+	background:url(../images/loginButtonBg.gif) no-repeat 0px 0px;
+	border:none;
+	padding-left:16px;
+	line-height:20px;
+}
+/*学科资源定义*/
+.subjectList li {
+	width:50%;
+	float:left;
+	background:url(../images/subjectListBg.gif) bottom repeat-x;
+}
+.subjectList li a {
+	width:100%;
+	height:30px;
+	line-height:30px;
+	padding-left:20px;
+	background:url(../images/listIcon2.gif) left center no-repeat;
+}
+/*党政建设*/
+#partyBuilding .pe_u_thumb, #partyBuilding .pe_u_thumb_title, #teacherShow .pe_u_thumb, #teacherShow .pe_u_thumb_title {
+	text-align:center;
+}
+#partyBuilding .pe_u_thumb_title, #teacherShow .pe_u_thumb_title {
+	font-weight:bold;
+	height:24px;
+	line-height:24px;
+	overflow:hidden;
+}
+/*底部定义*/
+#footer {
+	border-top:1px solid #8ABEE1;
+}
+#footer dl {
+	height: auto !important;
+	height: 85px;
+	min-height: 85px;
+	line-height:24px;
+	margin-top:15px;
+	text-align: center;
+}
+/*显示子栏目名称及其列表样式*/
+#sideBar .channelList h5 a {
+	font-size:12px;
+	color:#c00;
+	height:24px;
+	line-height:24px;
+}
+/*单页模板定义*/
+#onePage #sideBar {
+	width:223px;
+	float:left;
+}
+#onePage #sideBar li {
+	height:50px;
+	margin-bottom:8px;
+}
+#onePage #main_right {
+	float:right;
+	margin-left:-231px;
+	text-align:left;
+	width:100%;
+	height: auto !important;
+	height:700px;
+	min-height:700px;
+}
+#onePage #main_right_box {
+	margin-left:231px;
+	font-size:14px;
+}
+
+#onePage .c_content{line-height:1.8em;}
+#onePage .c_content h2{text-align:center; font-size:14px; }
+#onePage .c_content h3{text-align:center; font-size:13px;}
+#onePage .onePageThumblist{padding:10px;}
+#onePage .onePageThumblist li{display:inline;width:25%;float:left;text-align:center; }

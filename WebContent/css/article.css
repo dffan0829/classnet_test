@@ -1,0 +1,140 @@
+﻿/* ==文章节点定义== */
+
+/* 文章频道首页图片新闻 */
+#column1{background:url(../images/picNewsBG.gif) repeat-y right top; border:1px solid #D2E5EE;padding:8px; }
+#column1 .newsList h3{color:#4C9DCE;height:24px;line-height:24px; background:url(../images/newsListTitleBg.jpg) no-repeat right bottom; padding-left:12px; }
+
+.picNews {float:right; width:285px;height:100%;}
+.picNews  .pe_u_thumb{ width:280px;height:200px;border-right:1px solid #eee; }
+.picNews  .pe_u_thumb img{ width:280px;height:200px;}
+.picNews .pe_u_thumb_intro{text-align:left; }
+.pe_u_thumb_Intro a{font-weight:bold;}
+.pe_u_thumb_Intro,.pe_u_thumb_Intro a{color:#2E91B9;}
+.intro{text-indent:24px;}
+
+/* 首页文章二列式循环 */
+.childclass_content ul
+{
+	margin: 0px;
+	padding: 0px;
+}
+.childclass_content
+{
+	height: auto !important;
+	height: 240px;
+	min-height: 240px;
+}
+/* 热门栏目导航 */
+.a_class_menu
+{
+	clear: left;
+	padding: 5px;
+	margin-top: 5px;
+	background: #f9f9f9;
+	border: 1px solid #9bbde6;
+	text-align: left;
+}
+.a_class_menu ul, .a_class_menu li
+{
+	padding: 0px;
+	margin: 0px;
+	text-align: left;
+	list-style: none;
+}
+.a_class_menu a
+{
+	color: blue;
+	text-decoration: underline;
+}
+
+
+/* ==文章大类栏目页列表形式==  */
+.s_classlist_title
+{
+	font: normal normal bold 12px/150% Arial,"宋体",Helvetica,sans-serif;
+	border: 1px solid #9bbde6;
+}
+.s_classlist_text
+{
+	border-bottom: 1px solid #9bbde6;
+	border-left: 1px solid #9bbde6;
+	border-right: 1px solid #9bbde6;
+}
+.s_classlist_title_r, .s_classlist_title_c, .s_classlist_text_r, .s_classlist_text_c
+{
+	float: right;
+	text-align: center;
+	border-left: 1px solid #9bbde6;
+}
+.s_classlist_title_r, .s_classlist_title_c, .s_classlist_title_l
+{
+	font-weight: bold;
+}
+.s_classlist_title_l, .s_classlist_text_l
+{
+	padding-left: 5px;
+}
+.s_classlist_title_r, .s_classlist_text_r, .s_classlist_title_c, .s_classlist_text_c
+{
+	height: 22px;
+	width: 70px;
+	overflow: hidden;
+}
+.s_classlist_title_r, .s_classlist_text_r
+{
+	width: 50px;
+}
+.s_classlist_title_l, .s_classlist_title_c, .s_classlist_title_r, .s_classlist_text_l, .s_classlist_text_r, .s_classlist_text_c
+{
+	line-height: 22px;
+}
+/* ==小类栏目页列表形式== */
+/* 父栏目模板中无内容时使用 */
+.childclasslist_box
+{
+	margin: 5px 0px 0px 5px;
+}
+*html .childclasslist_box
+{
+	margin: 5px 0px 0px 10px;
+} 
+/* 子栏目模板中使用 */
+.c_main .childclasslist_box
+{
+	margin: 0px;
+}
+
+.c_main .childclasslist_box h3{background:url(../images/articleChildListTitleBg.gif) repeat-x 0px 0px; height:33px;line-height:33px;border:1px solid #C4DEE9;border-bottom:none; color:#4C9DCE; padding-left:18px; }
+
+.c_main .childclasslist_box .listStyle1{padding:0 5px;}
+/* 推荐图文 */
+.a_photo_list, .a_photo_list ul
+{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}
+.a_photo_list li
+{
+	
+	padding: 0px;
+	margin: 5px 0px;
+	list-style: none;
+	width: 150px;
+	float: left;
+	padding:0 15px;
+	_padding:0 10px;
+
+	
+}
+/* 内容页 */
+.c_content_text
+{
+
+}
+h1
+{
+	color: #0a4180;
+}
+resourceSearch_ad{ width:66px; height:24px; line-height:24px; display:block;background:url(/xpe/portal/resource/default/resAlliance/images/zi26.jpg) 0 0 no-repeat; text-align:center;color:#fff;border:none;}
+

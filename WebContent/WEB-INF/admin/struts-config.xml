@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+  	<form-bean name="newsForm" type="com.classnet.form.NewsForm"></form-bean>
+  	<form-bean name="clazzForm" type="com.classnet.form.ClazzForm"></form-bean>
+  	<form-bean name="sourceForm" type="com.classnet.form.SourceForm"></form-bean>
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+  	<action path="/index"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="index" path="/../WEB-INF/jsp/admin/index.jsp"></forward>
+  	</action>
+  	<action path="/news/newsMenu"
+  			scope="request"
+  			parameter="m"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="list" path="/../WEB-INF/jsp/admin/newsMenuList.jsp"></forward>
+  	</action>
+  	<action path="/news/pubnews"
+  			scope="request"
+  			parameter="m"
+  			name="newsForm"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="to" path="/../WEB-INF/jsp/admin/addnews.jsp"></forward>	
+  	</action>
+  	<action path="/news/news"
+  			scope="request"
+  			parameter="m"
+  			name="newsForm"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="list" path="/../WEB-INF/jsp/admin/newslist.jsp"></forward>
+  		<forward name="edit" path="/../WEB-INF/jsp/admin/addnews.jsp"></forward>
+  	</action>
+  	<action path="/clazz/clazzMenu"
+  			scope="request"
+  			parameter="m"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="list" path="/../WEB-INF/jsp/admin/clazzmenuList.jsp"></forward>
+  	</action>
+  	<action path="/clazz/fileType"
+  			scope="request"
+  			parameter="m"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="list" path="/../WEB-INF/jsp/admin/filetypeList.jsp"></forward>		
+  	</action>
+  	<action path="/clazz/add"
+  			scope="request"
+  			parameter="m"
+  			name="clazzForm"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="succ" path="/../WEB-INF/jsp/admin/addclazz.jsp"></forward>
+  	</action>
+  	<action path="/clazz/change"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  	</action>
+  	<action path="/clazz/clazz"
+  			scope="request"
+  			parameter="m"
+  			name="clazzForm"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="list" path="/../WEB-INF/jsp/admin/clazzList.jsp"></forward>
+  		<forward name="edit" path="/../WEB-INF/jsp/admin/addclazz.jsp"></forward>		
+  	</action>
+  	<action path="/source/menu"
+  			scope="request"
+  			parameter="m"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="list" path="/../WEB-INF/jsp/admin/sourceMenuList.jsp"></forward>
+  	</action>
+  	<action path="/source/source"
+  			scope="request"
+  			name="sourceForm"
+  			parameter="m"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="list" path="/../WEB-INF/jsp/admin/sourceList.jsp"></forward>
+  		<forward name="add" path="/../WEB-INF/jsp/admin/addsource.jsp"></forward>
+  		<forward name="edit" path="/../WEB-INF/jsp/admin/addsource.jsp"></forward>
+  	</action>
+  	<action path="/user"
+  			scope="request"
+  			parameter="m"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="list" path="/../WEB-INF/jsp/admin/userlist.jsp"></forward>
+  	</action>
+  	<action path="/homework"
+  			scope="request"
+  			parameter="m"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="titleList" path="/../WEB-INF/jsp/admin/homeworktitle.jsp"></forward>
+  		<forward name="addTitle" path="/../WEB-INF/jsp/admin/addhomeworktitle.jsp"></forward>
+  		<forward name="homeworktitledetail" path="/../WEB-INF/jsp/admin/homeworktitledetail.jsp"></forward>
+  		<forward name="homeworklist" path="/../WEB-INF/jsp/admin/homeworklist.jsp"></forward>
+  	</action>
+  	<action path="/topic/topicMenu"
+  			scope="request"
+  			parameter="m"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="list" path="/../WEB-INF/jsp/admin/topicmenulist.jsp"></forward>
+  	</action>
+  	<action path="/topic/topic"
+  			scope="request"
+  			parameter="m"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="list" path="/../WEB-INF/jsp/admin/topiclist.jsp"></forward>
+  	</action>
+
+
+  	<action path="/stu/exportstuinfo"
+  			scope="request"
+  			parameter="m"
+  			name="newsForm"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="list" path="/../WEB-INF/jsp/admin/stulist.jsp"></forward>
+  	</action>
+  </action-mappings>
+</struts-config>
+

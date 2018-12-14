@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+  	<form-bean name="uploadForm" type="com.classnet.form.UploadForm"></form-bean>
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+  	<!-- 新闻 -->
+  	<action path="/news/index"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="index" path="/WEB-INF/jsp/news/index.jsp"></forward>
+  	</action>
+  	<action path="/news/see"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="succ" path="/WEB-INF/jsp/news/article.jsp"></forward>
+  	</action>
+  	<action path="/news/menu"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="succ" path="/WEB-INF/jsp/news/menu.jsp"></forward>		
+  	</action>
+    <!-- 课程中心 -->
+    <action path="/clazz/index"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="succ" path="/WEB-INF/jsp/clazz/index.jsp"></forward>
+  	</action>
+  	<action path="/clazz/search"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="succ" path="/WEB-INF/jsp/clazz/searchresult.jsp"></forward>
+  	</action>
+  	<action path="/clazz/view"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="succ" path="/WEB-INF/jsp/clazz/clazz.jsp"></forward>
+  	</action>
+  	<!-- 资源下载 -->
+	<action path="/source/index"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+		<forward name="succ" path="/WEB-INF/jsp/source/index.jsp"></forward>
+	</action>
+	<action path="/source/menu"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+		<forward name="succ" path="/WEB-INF/jsp/source/menusource.jsp"></forward>
+	</action>
+	<!-- 注册 -->
+	<action path="/reg"
+			scope="request"
+			parameter="m"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+		<forward name="succ" path="/WEB-INF/jsp/reg.jsp"></forward>
+		<forward name="regok" path="/WEB-INF/jsp/regok.jsp"></forward>
+	</action>
+	<!-- 首页 -->
+	<action path="/index"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+		<forward name="succ" path="/WEB-INF/jsp/index.jsp"></forward>
+	</action>
+	
+	<!-- 上传图片 -->
+  	<action path="/upload"
+  			scope="request"
+  			name="uploadForm"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  	</action>
+  	<action path="/changeMenu"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  	</action>
+  	<!--  互动交流 -->
+  	<action path="/topic/index"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="succ" path="/WEB-INF/jsp/topic/index.jsp"></forward>
+  	</action>
+  	<action path="/topic/menu"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="topicmenu" path="/WEB-INF/jsp/topic/menulist.jsp"></forward>
+  	</action>
+  	<action path="/topic/topic"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="topic" path="/WEB-INF/jsp/topic/topic.jsp"></forward>
+  	</action>
+  	<action path="/topic/reply"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  	</action>
+  	<action path="/pingbi"
+  			scope="request"
+  			type="org.springframework.web.struts.DelegatingActionProxy">
+  	</action>
+  </action-mappings>
+  <message-resources parameter="ApplicationResources" />
+  <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/classes/applicationContext-action.xml" />
+	</plug-in>
+</struts-config>
+

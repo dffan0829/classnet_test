@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean id="propertyPlaceholderConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:ApplicationResources.properties</value>
+			</list>
+		</property>
+		<property name="fileEncoding" value="UTF-8"></property>
+	</bean>
+
+	<!-- 后台管理 -->
+	<bean name="/admin/index" class="com.classnet.action.admin.IndexAction">
+		<property name="newsDao" ref="newsDao"></property>
+		<property name="clazzDao" ref="clazzDao"></property>
+		<property name="sourceDao" ref="sourceDao"></property>
+		<property name="topicDao" ref="topicDao"></property>
+	</bean>
+	<bean name="/admin/news/newsMenu" class="com.classnet.action.admin.NewsMenuAction">
+		<property name="newsMenuDao" ref="newsMenuDao"></property>
+	</bean>
+	<bean name="/admin/news/pubnews" class="com.classnet.action.admin.PubNewsAction">
+		<property name="newsMenuDao" ref="newsMenuDao"></property>
+		<property name="newsDao" ref="newsDao"></property>
+		<property name="path" value="${upload_path}"></property>
+		<property name="type" value="${img_upload_type}"></property>
+	</bean>
+	<bean name="/admin/news/news" class="com.classnet.action.admin.NewsAction">
+		<property name="newsMenuDao" ref="newsMenuDao"></property>
+		<property name="newsDao" ref="newsDao"></property>
+		<property name="path" value="${upload_path}"></property>
+		<property name="type" value="${img_upload_type}"></property>
+	</bean>
+	<bean name="/admin/clazz/clazzMenu" class="com.classnet.action.admin.ClazzMenuAction">
+		<property name="clazzMenuDao" ref="clazzMenuDao"></property>
+	</bean>
+	<bean name="/admin/clazz/fileType" class="com.classnet.action.admin.FileTypeAction">
+		<property name="fileTypeDao" ref="fileTypeDao"></property>
+	</bean>
+	<bean name="/admin/clazz/add" class="com.classnet.action.admin.AddClazzAction">
+		<property name="clazzDao" ref="clazzDao"></property>
+		<property name="clazzMenuDao" ref="clazzMenuDao"></property>
+		<property name="fileTypeDao" ref="fileTypeDao"></property>
+		<property name="path" value="${upload_path}"></property>
+		<property name="type" value="${file_upload_type}"></property>
+		<property name="flashType" value="${flash_type}"></property>
+		<property name="imgType" value="${img_upload_type}"></property>
+	</bean>
+	<bean name="/admin/clazz/clazz" class="com.classnet.action.admin.ClazzAction">
+		<property name="clazzDao" ref="clazzDao"></property>
+		<property name="clazzMenuDao" ref="clazzMenuDao"></property>
+		<property name="fileTypeDao" ref="fileTypeDao"></property>
+		<property name="path" value="${upload_path}"></property>
+		<property name="type" value="${file_upload_type}"></property>
+		<property name="flashType" value="${flash_type}"></property>
+		<property name="imgType" value="${img_upload_type}"></property>
+	</bean>
+	<bean name="/admin/source/menu" class="com.classnet.action.admin.SourceMenuAction">
+		<property name="sourceMenuDao" ref="sourceMenuDao"></property>
+	</bean>
+	<bean name="/admin/source/source" class="com.classnet.action.admin.SourceAction">
+		<property name="sourceMenuDao" ref="sourceMenuDao"></property>
+		<property name="sourceDao" ref="sourceDao"></property>
+		<property name="path" value="${upload_path}"></property>
+		<property name="type" value="${source_file_type}"></property>
+	</bean>
+	<bean name="/admin/user" class="com.classnet.action.admin.UserAction">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	<bean name="/admin/homework" class="com.classnet.action.admin.HomeWorkAction">
+		<property name="homeWorkTitleDao" ref="homeWorkTitleDao"></property>
+		<property name="userHomeWorkDao" ref="userHomeWorkDao"></property>
+		<property name="path" value="${upload_path}"></property>
+	</bean>
+	<bean name="/admin/topic/topicMenu" class="com.classnet.action.admin.TopicMenuAction">
+		<property name="topicMenuDao" ref="topicMenuDao"></property>
+	</bean>
+	<bean name="/admin/topic/topic" class="com.classnet.action.admin.TopicAction">
+		<property name="topicMenuDao" ref="topicMenuDao"></property>
+		<property name="answerDao" ref="answerDao"></property>
+		<property name="topicDao" ref="topicDao"></property>
+	</bean>
+	
+	<!-- 新闻 -->
+	<bean name="/news/index" class="com.classnet.action.news.NewsIndexAction">
+		<property name="newsMenuDao" ref="newsMenuDao"></property>
+		<property name="newsDao" ref="newsDao"></property>
+	</bean>
+	<bean name="/news/see" class="com.classnet.action.news.SeeNewsAction">
+		<property name="newsMenuDao" ref="newsMenuDao"></property>
+		<property name="newsDao" ref="newsDao"></property>
+	</bean>
+	<bean name="/news/menu" class="com.classnet.action.news.NewsMenuAction">
+		<property name="newsDao" ref="newsDao"></property>
+		<property name="newsMenuDao" ref="newsMenuDao"></property>
+		<property name="clazzDao" ref="clazzDao"></property>
+	</bean>
+	
+	<!-- 课程中心 -->
+	<bean name="/clazz/index" class="com.classnet.action.clazz.ClazzIndexAction">
+		<property name="clazzDao" ref="clazzDao"></property>
+		<property name="clazzMenuDao" ref="clazzMenuDao"></property>
+		<property name="fileTypeDao" ref="fileTypeDao"></property>
+	</bean>
+	<bean name="/clazz/search" class="com.classnet.action.clazz.SearchAction">
+		<property name="clazzMenuDao" ref="clazzMenuDao"></property>
+		<property name="fileTypeDao" ref="fileTypeDao"></property>
+	</bean>
+	<bean name="/clazz/view" class="com.classnet.action.clazz.ClazzViewAction">
+		<property name="clazzMenuDao" ref="clazzMenuDao"></property>
+		<property name="clazzDao" ref="clazzDao"></property>
+	</bean>
+	
+	<!-- 资源下载 -->
+	<bean name="/source/index" class="com.classnet.action.source.SourceIndexAction">
+		<property name="clazzDao" ref="clazzDao"></property>
+		<property name="newsDao" ref="newsDao"></property>
+		<property name="sourceDao" ref="sourceDao"></property>
+		<property name="sourceMenuDao" ref="sourceMenuDao"></property>
+	</bean>
+	<bean name="/source/menu" class="com.classnet.action.source.MenuAction">
+		<property name="sourceMenuDao" ref="sourceMenuDao"></property>
+		<property name="clazzDao" ref="clazzDao"></property>
+		<property name="newsDao" ref="newsDao"></property>
+	</bean>
+	
+	<!-- 注册 -->
+	<bean name="/reg" class="com.classnet.action.RegAction">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	
+	<!-- 首页 -->
+	<bean name="/index" class="com.classnet.action.IndexAction">
+		<property name="clazzDao" ref="clazzDao"></property>
+		<property name="newsDao" ref="newsDao"></property>
+		<property name="sourceDao" ref="sourceDao"></property>
+		<property name="sourceMenuDao" ref="sourceMenuDao"></property>
+		<property name="clazzMenuDao" ref="clazzMenuDao"></property>
+		<property name="topicDao" ref="topicDao"></property>
+		<property name="topicMenuDao" ref="topicMenuDao"></property>
+	</bean>
+	
+	<!--  互动交流 -->
+	<bean name="/topic/index" class="com.classnet.action.topic.TopicIndexAction">
+		<property name="topicMenuDao" ref="topicMenuDao"></property>
+		<property name="topicDao" ref="topicDao"></property>
+	</bean>
+	<bean name="/topic/menu" class="com.classnet.action.topic.MenuAction">
+		<property name="topicMenuDao" ref="topicMenuDao"></property>
+	</bean>
+	<bean name="/topic/topic" class="com.classnet.action.topic.TopicAction">
+		<property name="topicDao" ref="topicDao"></property>
+		<property name="answerDao" ref="answerDao"></property>
+	</bean>
+	<bean name="/topic/reply" class="com.classnet.action.topic.ReplyAction">
+		<property name="topicDao" ref="topicDao"></property>
+		<property name="answerDao" ref="answerDao"></property>
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	<bean name="/pingbi" class="com.classnet.action.topic.PingBiReplyAction">
+		<property name="answerDao" ref="answerDao"></property>
+	</bean>
+	
+	<!-- 用户中心 -->
+	<bean name="/master/index" class="com.classnet.action.master.IndexAction">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	<bean name="/master/homework" class="com.classnet.action.master.DoHomeWorkAction">
+		<property name="homeWorkTitleDao" ref="homeWorkTitleDao"></property>
+		<property name="userHomeWorkDao" ref="userHomeWorkDao"></property>
+		<property name="userDao" ref="userDao"></property>
+		<property name="path" value="${upload_path}"></property>
+	</bean>
+	<bean name="/master/topic" class="com.classnet.action.master.TopicAction">
+		<property name="userDao" ref="userDao"></property>
+		<property name="topicDao" ref="topicDao"></property>
+		<property name="topicMenuDao" ref="topicMenuDao"></property>
+		<property name="answerDao" ref="answerDao"></property>
+	</bean>
+	
+	<!-- fckeditor上传图片 -->
+	<bean name="/upload" class="com.classnet.action.UploadAction">
+		<property name="path" value="${upload_path}"></property>
+		<property name="uploadHttpPath" value="${upload_http_path}"></property>
+		<property name="type" value="${img_upload_type}"></property>
+	</bean>
+	
+	<bean name="/changeMenu" class="com.classnet.action.ChangeAction">
+		<property name="clazzMenuDao" ref="clazzMenuDao"></property>
+	</bean>
+	
+	<!-- 导入excel数据到数据库 -->
+	<bean name="/admin/stu/exportstuinfo" class="com.classnet.test.StuInfoFileUploadAction">
+		<property name="studentDao" ref="studentDao"></property>
+		<property name="path" value="${upload_path}"></property>
+		<property name="type" value="${img_upload_type}"></property>
+	</bean>
+</beans>
