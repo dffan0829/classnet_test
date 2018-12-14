@@ -23,7 +23,7 @@ import com.classnet.entity.FileTypeEntity;
 import com.classnet.form.ClazzForm;
 import com.classnet.util.DateUtil;
 import com.classnet.util.upload.UploadFileImpl;
-
+//2018-12-14 17:42:46
 public class AddClazzAction extends DispatchAction{
 
 	private String imgType;
