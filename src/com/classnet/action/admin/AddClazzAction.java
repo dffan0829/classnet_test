@@ -34,6 +34,10 @@ public class AddClazzAction extends DispatchAction{
 	private ClazzMenuDao clazzMenuDao;
 	private FileTypeDao fileTypeDao;
 	private ClazzDao clazzDao;
+	
+	private String testaaa;
+	
+	
 	public void setClazzMenuDao(ClazzMenuDao clazzMenuDao) {
 		this.clazzMenuDao = clazzMenuDao;
 	}
